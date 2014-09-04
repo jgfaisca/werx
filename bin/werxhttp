@@ -1,0 +1,66 @@
+#!/usr/bin/env node
+var debug = require('debug')('log4js-example');
+var cluster = require('cluster');
+var defaultport = 3000;
+var bindaddr = '0.0.0.0';
+// defaults to CPU core count 
+var autoworkers = true;
+// used if autoworkers is false   
+var defaultworkers = 1; 
+
+/**
+ * make a log directory, just in case it isn't there.
+ */
+try {
+  require('fs').mkdirSync('./log');
+} catch (e) {
+  if (e.code != 'EEXIST') {
+    console.error("Could not set up log directory, error was: ", e);
+    process.exit(1);
+  }
+}
+
+/**
+ * Initialise log4js first, so we don't miss any log messages
+ */
+var log4js = require('log4js');
+log4js.configure('./config/log4js.json');
+
+var log = log4js.getLogger("startup");
+
+/**
+ * Start up a cluster 
+ */
+if (cluster.isMaster) { // Code to run if we're in the master process
+
+    if (autoworkers) {
+       	// Count the machine's CPUs
+       	var totalworkers = require('os').cpus().length; 
+    } else {
+	// use default workers 	
+        totalworkers = defaultworkers;
+    }
+
+    // Create workers
+    console.log("Starting " + totalworkers + " worker(s)...");
+    for (var i = 0; i < totalworkers; i += 1) {
+        cluster.fork();
+    }
+
+    // Listen for dying workers
+    cluster.on('exit', function (worker) {
+        // Replace the dead worker
+        console.log('Worker ' + worker.id + ' died :(');
+        cluster.fork();
+    });
+
+} else { // Code to run if we're in a worker process
+
+  var app = require('../app');
+  app.set('port', process.env.PORT || defaultport);
+  var server = app.listen(app.get('port'), bindaddr, function() {
+    log.info('Web HTTP server listening on port ', server.address().port, " with pid ", process.pid );
+   console.log("A worker is now connected to " + bindaddr + ":" + server.address().port + " with id " + cluster.worker.id);
+  });
+
+};
