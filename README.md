@@ -21,12 +21,10 @@ To run SPDY server:
 node bin/werxspdy
 ```
 
-Ports
-=============
+## Ports
 
 Default ports: `HTTP = 3000, HTTPS = 3443, SPDY = 3443`
 
-Log
-==========
+## Log
 
 Config file is in `config/log4js.json`. 
