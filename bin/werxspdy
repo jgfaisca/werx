@@ -14,7 +14,6 @@ var defaultworkers = 1;
 var options = {
   key: fs.readFileSync('./keys/key.pem'),
   cert: fs.readFileSync('./keys/cert.pem'),
-  ca: fs.readFileSync('./keys/ca.pem'),
 
   // **optional** SPDY-specific options
   windowSize: 1024 * 1024, // Server's window size

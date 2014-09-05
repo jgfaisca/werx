@@ -1,6 +1,6 @@
 {
   "name": "werx",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A full Node Web server on multiple processes",
   "main": "app.js",
   "scripts": {
@@ -18,7 +18,7 @@
   ], 
   "dependencies": {
     "express": "~4.6.0",
-    "static-favicon": "~1.0.0",
+    "serv-favicon": "~2.1.1",
     "cookie-parser": "~1.0.1",
     "body-parser": "~1.0.0",
     "debug": "~0.7.4",
@@ -28,5 +28,8 @@
     "spdy": "~1.27.0"
   },
   "author": "Jose Faisca <jose.faisca@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "repository": "https://github.com/zekaf/werx.git",
+  "homepage": "http://zekaf.github.io/werx",
+  "bugs": "https://github.com/zekaf/werx/issues"
 }
