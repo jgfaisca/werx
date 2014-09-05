@@ -1,4 +1,4 @@
 WerX
 ====
 
-werx web site 
+GitHub pages web site 
