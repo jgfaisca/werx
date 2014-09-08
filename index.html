@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Werx by zekaf</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Werx</h1>
+        <p>A full Node Web server on multiple processes</p>
+
+        <p class="view"><a href="https://github.com/zekaf/werx">View the Project on GitHub <small>zekaf/werx</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/zekaf/werx/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/zekaf/werx/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/zekaf/werx">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <h1>
+<a name="werx" class="anchor" href="#werx"><span class="octicon octicon-link"></span></a>werx</h1>
+
+<p>A full Node Web server on multiple processes (defaults to CPU core count). A single instance of Node runs in a single thread. To take advantage of multi-core systems, werx launch a cluster of Node processes 
+to handle the load. You will need to install Node.js (0.8+ with npm). </p>
+
+<p>To Install:</p>
+
+<pre><code>npm install werx
+</code></pre>
+
+<p>To run HTTP server:</p>
+
+<pre><code>node bin/werxhttp
+</code></pre>
+
+<p>To run HTTPS server:</p>
+
+<pre><code>node bin/werxhttps
+</code></pre>
+
+<p>To run SPDY server:</p>
+
+<pre><code>node bin/werxspdy
+</code></pre>
+
+<h2>
+<a name="ports" class="anchor" href="#ports"><span class="octicon octicon-link"></span></a>Ports</h2>
+
+<p>Default ports: <code>HTTP = 3000, HTTPS = 3443, SPDY = 3443</code></p>
+
+<h2>
+<a name="log" class="anchor" href="#log"><span class="octicon octicon-link"></span></a>Log</h2>
+
+<p>Config file is in <code>config/log4js.json</code>. </p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/zekaf">zekaf</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="javascripts/scale.fix.js"></script>
+    
+  </body>
+</html>
