@@ -4,7 +4,7 @@
  <title>werx</title>
  <link href="http://username.github.io/" rel="self"/>
  <link href="http://username.github.io"/>
- <updated>2014-09-09T00:59:53+01:00</updated>
+ <updated>2014-09-09T01:20:18+01:00</updated>
  <id>http://username.github.io</id>
  <author>
    <name>Jose Faisca</name>
@@ -430,8 +430,8 @@ As noted, our main programming constraint is the fact that our API is limited to
 
 &lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
 
-&lt;p&gt;Please take a look at []()
-or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&lt;/p&gt;
+&lt;p&gt;Please take a look at [](http://zekaf.github.io/werx)
+or jump right into &lt;a href=&quot;http://zekaf.github.io/werx&quot;&gt;Usage&lt;/a&gt; if you’d like.&lt;/p&gt;
 </content>
  </entry>
  

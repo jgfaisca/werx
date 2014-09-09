@@ -5,8 +5,8 @@
         <description>werx - Jose Faisca</description>
         <link>http://username.github.io</link>
         <link>http://username.github.io</link>
-        <lastBuildDate>2014-09-09T00:59:53+01:00</lastBuildDate>
-        <pubDate>2014-09-09T00:59:53+01:00</pubDate>
+        <lastBuildDate>2014-09-09T01:20:18+01:00</lastBuildDate>
+        <pubDate>2014-09-09T01:20:18+01:00</pubDate>
         <ttl>1800</ttl>
 
 
@@ -425,8 +425,8 @@ As noted, our main programming constraint is the fact that our API is limited to
 
 &lt;h2 id=&quot;next-steps&quot;&gt;Next Steps&lt;/h2&gt;
 
-&lt;p&gt;Please take a look at []()
-or jump right into &lt;a href=&quot;&quot;&gt;Usage&lt;/a&gt; if you’d like.&lt;/p&gt;
+&lt;p&gt;Please take a look at [](http://zekaf.github.io/werx)
+or jump right into &lt;a href=&quot;http://zekaf.github.io/werx&quot;&gt;Usage&lt;/a&gt; if you’d like.&lt;/p&gt;
 </description>
                 <link>http://username.github.io/lessons/2011/12/29/jekyll-introduction</link>
                 <guid>http://username.github.io/lessons/2011/12/29/jekyll-introduction</guid>
