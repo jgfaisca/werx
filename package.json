@@ -1,6 +1,6 @@
 {
   "name": "werx",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "A full Node Web server on multiple processes",
   "main": "app.js",
   "scripts": {

@@ -64,7 +64,7 @@ if (cluster.isMaster) { // Code to run if we're in the master process
   // Listen for dying workers
   cluster.on('exit', function (worker) {
      // Replace the dead worker
-     console.log('Worker ' + worker.id + ' died :(');
+     console.log('Worker ' + worker.id + ' died');
      cluster.fork();
   });
 
@@ -74,7 +74,7 @@ if (cluster.isMaster) { // Code to run if we're in the master process
   app.set('port', process.env.PORT || defaultport);
   var server = spdy.createServer(options, app).listen(defaultport, bindaddr, function(){  
     log.info('Web SPDY server listening on port ', server.address().port, " with pid ", process.pid);
-    console.log("A worker is now connected to " + bindaddr + ":" + server.address().port + " with id " + cluster.worker.id);
+    console.log("A worker is now connected to " + bindaddr + ":" + server.address().port + " with pid " + process.pid + " and id " + cluster.worker.id);
   });
 
 };
