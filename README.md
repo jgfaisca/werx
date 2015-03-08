@@ -1,7 +1,11 @@
 werx
 ====
 
-A full Node Web server on multiple processes (defaults to CPU core count). A single instance of Node runs in a single thread. To take advantage of multi-core systems, werx launch a cluster of Node processes to handle the load. You will need to install Node.js (0.10.19+ with npm). Updated to use [HTTP/2] (Hypertext Transfer Protocol version 2 draft-16).
+A full Node Web server on multiple processes (defaults to CPU core count). A single instance of Node runs in a single thread. To take advantage of multi-core systems, werx launch a cluster of Node processes to handle the load. 
+
+You will need to install Node.js (0.10.19+ with npm). 
+
+Updated to use Hypertext Transfer Protocol version 2 draft-16 ([HTTP/2]).
 
 To Install:
 
