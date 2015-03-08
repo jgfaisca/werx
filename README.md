@@ -5,7 +5,7 @@ A full Node Web server on multiple processes (defaults to CPU core count). A sin
 
 You will need to install Node.js (0.10.19+ with npm). 
 
-Updated to use Hypertext Transfer Protocol version 2 draft-16 ([HTTP/2]).
+Updated to use Hypertext Transfer Protocol version 2 draft-16, [HTTP/2].
 
 To Install:
 
