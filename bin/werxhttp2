@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 var debug = require('debug')('log4js-example');
 var cluster = require('cluster');
-var spdy = require('spdy');
+var http2 = require('http2');
 var fs = require('fs');
 var defaultport = 3443;
 var bindaddr = '0.0.0.0'; 
@@ -10,16 +10,13 @@ var autoworkers = true;
 // used if autoworkers is false   
 var defaultworkers = 1; 
 
-// spdy options
+// HTTP/2 options
 var options = {
+  // key and certificate 
   key: fs.readFileSync('./keys/key.pem'),
   cert: fs.readFileSync('./keys/cert.pem'),
-
-  // **optional** SPDY-specific options
-  windowSize: 1024 * 1024, // Server's window size
-
-  // **optional** if true - server will send 3.1 frames on 3.0 *plain* spdy
-  autoSpdy31: false
+  // if true the server will accept connections over plain TCP instead of TLS	 
+  plain: false 
 };
 
 /**
@@ -72,9 +69,9 @@ if (cluster.isMaster) { // Code to run if we're in the master process
 
   var app = require('../app');
   app.set('port', process.env.PORT || defaultport);
-  var server = spdy.createServer(options, app).listen(defaultport, bindaddr, function(){  
-    log.info('Web SPDY server listening on port ', server.address().port, " with pid ", process.pid);
-    console.log("A worker is now connected to " + bindaddr + ":" + server.address().port + " with pid " + process.pid + " and id " + cluster.worker.id);
+  var server = http2.createServer(options, app).listen(defaultport, bindaddr, function(){  
+    log.info('Web HTTP/2 server listening on port ', defaultport, " with pid ", process.pid);
+    console.log("A worker is now connected to " + bindaddr + ":" + defaultport + " with pid " + process.pid + " and id " + cluster.worker.id);
   });
 
 };

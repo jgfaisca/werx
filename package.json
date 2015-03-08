@@ -1,15 +1,18 @@
 {
   "name": "werx",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "A full Node Web server on multiple processes",
   "main": "app.js",
+  "engines" : {
+    "node" : ">=0.10.19"
+  },
   "scripts": {
     "start": "node ./bin/werxhttp"
   },
   "keywords": [
     "http",
     "https",
-    "spdy",
+    "http/2",
     "net",
     "listener",
     "cluster", 
@@ -25,7 +28,7 @@
     "jade": "~1.3.0",
     "log4js": "~0.6.15",
     "compression" : "~1.0.9",
-    "spdy": "~1.27.0"
+    "http2": "~3.2.0"
   },
   "author": "Jose Faisca <jose.faisca@gmail.com>",
   "license": "MIT",
